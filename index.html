@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LOAD. — AI-Driven Recovery Band</title>
+    <meta name="description"
+        content="LOAD. is an AI-driven recovery band with in-app performance insights. Train smarter. Recover harder. Perform better." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Grain overlay -->
+    <div class="grain" aria-hidden="true"></div>
+
+    <!-- Theme Toggle -->
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+        <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="5" />
+            <line x1="12" y1="1" x2="12" y2="3" />
+            <line x1="12" y1="21" x2="12" y2="23" />
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+            <line x1="1" y1="12" x2="3" y2="12" />
+            <line x1="21" y1="12" x2="23" y2="12" />
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+        <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+            stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+        </svg>
+    </button>
+
+    <!-- ═══════════ HERO ═══════════ -->
+    <section id="hero" class="section hero">
+        <div class="hero-content" data-parallax>
+            <h1 class="hero-title fade-up">
+                LOAD<span class="dot">.</span>
+            </h1>
+            <p class="hero-sub fade-up delay-1">AI-driven recovery band with in-app performance insights.</p>
+            <p class="hero-tagline fade-up delay-2">Train smarter. Recover harder. Perform better.</p>
+            <div class="btn-group fade-up delay-3">
+                <a href="#" class="btn" id="hero-download">Download App</a>
+                <a href="#waitlist" class="btn" id="hero-waitlist">Join Waitlist</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ PRODUCT ═══════════ -->
+    <section id="product" class="section product">
+        <div class="container">
+            <div class="product-mock fade-up">
+                <div class="mock-band">
+                    <div class="mock-screen"></div>
+                </div>
+            </div>
+            <p class="product-text fade-up delay-1">Built for athletes, gym warriors, and serious fitness enthusiasts.
+            </p>
+            <p class="product-sub fade-up delay-2">Cheaper. Smarter algorithm. No noise.</p>
+        </div>
+    </section>
+
+    <!-- ═══════════ VALUE ═══════════ -->
+    <section id="value" class="section value">
+        <div class="container">
+            <h2 class="value-heading fade-up">Most athletes overtrain<br />without knowing it.</h2>
+            <p class="value-answer fade-up delay-2">LOAD<span class="dot">.</span> knows.</p>
+        </div>
+    </section>
+
+    <!-- ═══════════ WAITLIST ═══════════ -->
+    <section id="waitlist" class="section waitlist">
+        <div class="container">
+            <form class="email-form fade-up" id="waitlist-form">
+                <input type="email" id="email-input" placeholder="Enter your email" required autocomplete="email" />
+                <button type="submit" class="btn" id="waitlist-submit">Join Waitlist</button>
+            </form>
+            <p class="form-msg" id="form-msg"></p>
+        </div>
+    </section>
+
+    <!-- ═══════════ FINAL CTA ═══════════ -->
+    <section id="cta" class="section cta">
+        <div class="container">
+            <h2 class="cta-heading fade-up">Ready to unlock<br />peak recovery?</h2>
+            <div class="btn-group fade-up delay-1">
+                <a href="#" class="btn" id="cta-download">Download App</a>
+                <a href="#waitlist" class="btn" id="cta-waitlist">Join Waitlist</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ═══════════ FOOTER ═══════════ -->
+    <footer class="footer">
+        <div class="footer-icons fade-up">
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/loadfitco?igsh=MXE3bHI2bjJ5eGF0Nw==" target="_blank"
+                rel="noopener noreferrer" class="icon-link" id="social-instagram" aria-label="Instagram">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="2" width="20" height="20" rx="5" />
+                    <circle cx="12" cy="12" r="5" />
+                    <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none" />
+                </svg>
+            </a>
+            <!-- X / Twitter -->
+            <a href="https://x.com/loadfitss" target="_blank" rel="noopener noreferrer" class="icon-link" id="social-x"
+                aria-label="X">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4l6.5 8L4 20h2l5.5-6.8L16 20h4l-6.8-8.5L20 4h-2l-5.2 6.3L8 4H4z" />
+                </svg>
+            </a>
+            <!-- Gmail -->
+            <a href="mailto:loadfitnessco@gmail.com" class="icon-link" id="social-email" aria-label="Email">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="2" y="4" width="20" height="16" rx="2" />
+                    <polyline points="22,6 12,13 2,6" />
+                </svg>
+            </a>
+        </div>
+        <a href="mailto:contact@loadband.com" class="footer-contact" id="footer-contact">Contact Us</a>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
