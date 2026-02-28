@@ -79,11 +79,69 @@
     <!-- ═══════════ WAITLIST ═══════════ -->
     <section id="waitlist" class="section waitlist">
         <div class="container">
-            <form class="email-form fade-up" id="waitlist-form">
-                <input type="email" id="email-input" placeholder="Enter your email" required autocomplete="email" />
-                <button type="submit" class="btn" id="waitlist-submit">Join Waitlist</button>
+            <h2 class="waitlist-heading fade-up">Join the Elite</h2>
+            <form class="waitlist-form fade-up" id="waitlist-form">
+                <div class="form-group">
+                    <label for="name">Full Name <span class="required">*</span></label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" required />
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address <span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" required autocomplete="email" />
+                </div>
+                <div class="form-group row">
+                    <div class="form-half">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+1 234 567 8900" />
+                    </div>
+                    <div class="form-half">
+                        <label for="city">City</label>
+                        <input type="text" id="city" name="city" placeholder="New York" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="fitness-level">Fitness Level</label>
+                    <select id="fitness-level" name="fitnessLevel">
+                        <option value="" disabled selected>Select level</option>
+                        <option value="Beginner">Beginner</option>
+                        <option value="Intermediate">Intermediate</option>
+                        <option value="Athlete">Athlete</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="primary-goal">Primary Goal</label>
+                    <select id="primary-goal" name="primaryGoal">
+                        <option value="" disabled selected>Select goal</option>
+                        <option value="Fat Loss">Fat Loss</option>
+                        <option value="Recovery">Recovery</option>
+                        <option value="Performance">Performance</option>
+                        <option value="Sleep">Sleep</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="wearable">Current Wearable Device</label>
+                    <select id="wearable" name="wearable">
+                        <option value="" disabled selected>Select device</option>
+                        <option value="Apple Watch">Apple Watch</option>
+                        <option value="Garmin">Garmin</option>
+                        <option value="None">None</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="form-group pb-4">
+                    <label>Would you pay ₹2,999/month for early access? <span class="required">*</span></label>
+                    <div class="radio-group">
+                        <label class="radio-label"><input type="radio" name="willingToPay" value="Yes" required> <span class="radio-custom"></span> Yes</label>
+                        <label class="radio-label"><input type="radio" name="willingToPay" value="Maybe"> <span class="radio-custom"></span> Maybe</label>
+                        <label class="radio-label"><input type="radio" name="willingToPay" value="No"> <span class="radio-custom"></span> No</label>
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-full" id="waitlist-submit">
+                    <span class="btn-text">Secure My Spot</span>
+                    <div class="spinner hidden" id="submit-spinner"></div>
+                </button>
             </form>
-            <p class="form-msg" id="form-msg"></p>
+            <div class="form-msg hidden" id="form-msg"></div>
         </div>
     </section>
 

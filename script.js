@@ -68,22 +68,61 @@
     // ─── Waitlist form ───
     const form = document.getElementById('waitlist-form');
     const msg = document.getElementById('form-msg');
+    const submitBtn = document.getElementById('waitlist-submit');
 
     if (form) {
-        form.addEventListener('submit', (e) => {
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            const email = document.getElementById('email-input').value.trim();
+            
+            // Gather form data
+            const formData = new FormData(form);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Basic validation
+            if (!data.name || !data.email || !data.willingToPay) {
+                showMsg('Please fill out all required fields.', 'error');
+                return;
+            }
 
-            if (email) {
-                msg.textContent = 'You\'re on the list. We\'ll be in touch.';
-                msg.classList.add('show');
-                form.reset();
+            // Set loading state
+            submitBtn.classList.add('loading');
+            submitBtn.disabled = true;
+            msg.classList.remove('show', 'success', 'error', 'hidden');
 
-                setTimeout(() => {
-                    msg.classList.remove('show');
-                }, 4000);
+            try {
+                // Change URL when deployed
+                const response = await fetch('http://localhost:3000/api/waitlist/signup', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+
+                const result = await response.json();
+
+                if (response.ok) {
+                    showMsg('Secure spot claimed! We will be in touch.', 'success');
+                    form.reset();
+                } else {
+                    showMsg(result.message || 'Something went wrong. Please try again.', 'error');
+                }
+            } catch (error) {
+                showMsg('Unable to connect to server. Please try again later.', 'error');
+            } finally {
+                submitBtn.classList.remove('loading');
+                submitBtn.disabled = false;
             }
         });
+    }
+
+    function showMsg(text, type) {
+        msg.textContent = text;
+        msg.className = `form-msg ${type} show`;
+        
+        setTimeout(() => {
+            msg.className = `form-msg hidden`;
+        }, 5000);
     }
 
     // ─── Smooth scroll for anchor links ───
